@@ -31,7 +31,7 @@ or the wrong real time data being setState in component like OrderBook component
 ---
 ```
 class OrderBook extends Component {
-  componentDidmount() {
+  componentDidMount() {
     this.subscribe();
   }
   subscribe() {
