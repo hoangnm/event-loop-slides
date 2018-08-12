@@ -18,3 +18,42 @@ Browser under the hood has:
 ---
 How about async operations, how does it work ?
 [Example](http://latentflip.com/loupe/?code=ZnVuY3Rpb24gcHJpbnRIZWxsbygpIHsNCiAgICBjb25zb2xlLmxvZygnSGVsbG8gZnJvbSBiYXonKTsNCn0NCg0KZnVuY3Rpb24gYmF6KCkgew0KICAgIHNldFRpbWVvdXQocHJpbnRIZWxsbywgMTAwMCk7DQogICAgY29uc29sZS5sb2coJ2RvbmUnKTsNCn0NCg0KZnVuY3Rpb24gZm9vKCkgew0KICAgIGJheigpOw0KfQ0KDQpmb28oKTs%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)
+---
+Ok, it's great, but why should we know it ? I can code the app without knowing too much about it.
+-> For our app which needs real time and has a lot of user's interactions, knowing this will help us understand and avoid the regular bug in React app:
+```
+Warning: setState(…): Can only update a mounted or mounting component. This usually means you called setState() on an unmounted component.
+```
+or the wrong real time data being setState in component like OrderBook component.
+Specific code:
+```
+class OrderBook extends Component {
+  componentDidmount() {
+    this.subscribe();
+  }
+  subscribe() {
+    if (this.unsubscribe) {
+      this.unsubscribe();
+    }
+    getOrderBook(this.props.productId)
+      .then(() => {
+        this.unsubscribe = subscribe(productId, this.onSubscribe);
+      })
+  }
+  onSubscribe(data) {
+    this.setState({
+      orderBookData: data,
+    });
+  }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.productId !== this.props.productId) {
+      this.subscribe();
+    }
+  }
+  componentWillUnmount() {
+    if (this.unsubscribe) {
+      this.unsubscribe();
+    }
+  }
+}
+```
