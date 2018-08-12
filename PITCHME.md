@@ -14,5 +14,4 @@ Event loop is what allow js application to work with asynchronous operations. It
 ![eventLoop](images/event_loop.png)
 ---
 ### Call stack.
-It has exactly mechanism as you know about stack: LIFO.
 ![callStack](images/call_stack.jpg)
