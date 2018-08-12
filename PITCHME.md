@@ -9,7 +9,7 @@ Event loop is what allow js application to work with asynchronous operations. It
 + Call stack.
 + Event loop & event queue.
 + Js Heap.
-+ Web API.
++ Web APIs.
 ---
 ![eventLoop](images/event_loop.png)
 ---
