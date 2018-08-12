@@ -13,4 +13,4 @@ Event loop is what allow js application to work with asynchronous operations. It
 ---
 ![eventLoop](images/event_loop.png)
 ---
-![callStack](images/call_stack.jpg)
+![callStack](images/call_stack.gif)
