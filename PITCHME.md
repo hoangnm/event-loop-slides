@@ -23,7 +23,7 @@ Why should we know it ?
 
 Ok, it's great, but why should we know it ? I can code the app without knowing too much about it.
 
--> For our app which needs real time and has a lot of user's interactions, knowing this will help us understand and avoid the regular bug in React app:
+-> For our app which needs real time data and has a lot of user's interactions, knowing this will help us understand and avoid the regular bugs in React app:
 ```
 Warning: setState(…): Can only update a mounted or mounting component. This usually means you called setState() on an unmounted component.
 ```
