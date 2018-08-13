@@ -44,7 +44,7 @@ class OrderBook extends Component {
         this.setState({
           orderBookData: data,
         });
-        subscribe(productId, this.onSubscribe)
+        subscribe(this.props.productId, this.onSubscribe)
           .then((unsubscribe) => {
             this.unsubscribe = unsubscribe;
           });
