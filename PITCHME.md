@@ -8,7 +8,7 @@
 Event loop is what allow js application to work with asynchronous operations.
 Browser under the hood has:
 + Call stack.
-+ Event loop & event queue.
++ Event loop & event (or callback) queue.
 + Js Heap.
 + Web APIs.
 ---
@@ -47,7 +47,7 @@ class OrderBook extends Component {
           .then((unsubscribe) => {
             this.unsubscribe = unsubscribe;
           });
-      })
+      });
   }
   onSubscribe(data) {
     this.setState({
