@@ -6,6 +6,7 @@
 ---
 ### What is event loop ?
 Event loop is what allow js application to work with asynchronous operations.
+
 Browser under the hood has:
 + Call stack.
 + Event loop & event (or callback) queue.
