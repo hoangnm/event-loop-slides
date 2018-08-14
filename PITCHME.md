@@ -17,7 +17,7 @@ Browser under the hood has:
 ---
 ![callStack](images/call_stack.gif)
 ---
-How about async operations, how does it work ?
+### How about async operations ?
 When call stack has function that use web apis with callback, it will register callback to the api. Then the api will send callback to callback queue if something happens. Event loop will check if the call stack is empty, it will pick the callback from call back queue and push to call stack.
 ---
 ![eventLoop](images/event_loop.gif)
