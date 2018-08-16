@@ -17,14 +17,16 @@ Browser under the hood has:
 ---
 ![callStack](images/call_stack.gif)
 ---
-### How about async operations ?
+### Async operations
+![eventLoop](images/event_loop.gif)
+---
+### Async operations
 When call stack has function that use web apis with callback, it will register callback to the api.
 
 Then the api will send callback to callback queue if something happens.
 
 Event loop will check if the call stack is empty, it will pick the callback from call back queue and push to call stack.
 ---
-![eventLoop](images/event_loop.gif)
 ---
 [Example](http://latentflip.com/loupe/?code=ZnVuY3Rpb24gcHJpbnRIZWxsbygpIHsNCiAgICBjb25zb2xlLmxvZygnSGVsbG8gZnJvbSBiYXonKTsNCn0NCg0KZnVuY3Rpb24gYmF6KCkgew0KICAgIHNldFRpbWVvdXQocHJpbnRIZWxsbywgMTAwMCk7DQogICAgY29uc29sZS5sb2coJ2RvbmUnKTsNCn0NCg0KZnVuY3Rpb24gZm9vKCkgew0KICAgIGJheigpOw0KfQ0KDQpmb28oKTs%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)
 ---
