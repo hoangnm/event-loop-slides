@@ -30,13 +30,10 @@ Event loop will check if the call stack is empty, it will pick the callback from
 ---
 ### Why should we know it ?
 
-Ok, it's great, but why should we know it ? I can code the app without knowing too much about it.
-
--> For our app which needs real time data and has a lot of user's interactions, knowing event-loop will help us understand and avoid the regular bugs in React app:
-```
-Warning: setState(…): Can only update a mounted or mounting component. This usually means you called setState() on an unmounted component.
-```
-or the wrong real time data being setState in component like OrderBook component.
+For our app that needs real time data and has a lot of user's interactions, knowing event-loop will help us understand and avoid the regular bugs:
++ Warning: setState(…): Can only update a mounted or mounting component. This usually means you called setState() on an unmounted component.
++ The wrong real time data being used (like setState in OrderBook component).
++ Memory leaks.
 ---
 ```
 class OrderBook extends Component {
