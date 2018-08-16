@@ -33,7 +33,7 @@ Event loop will check if the call stack is empty, it will pick the callback from
 
 For app that needs real time data and has a lot of user's interactions, knowing event-loop will help us understand and avoid regular bugs:
 + Warning: setState(…): Can only update a mounted or mounting component. This usually means you called setState() on an unmounted component.
-+ The wrong real time data being used (like setState in OrderBook component).
++ The wrong data being used.
 + Memory leaks.
 ---
 ```
