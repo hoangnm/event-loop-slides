@@ -80,3 +80,5 @@ https://reactjs.org/blog/2015/12/16/ismounted-antipattern.html
 ### References
 + https://www.youtube.com/watch?v=8aGhZQkoFbQ
 + https://itnext.io/how-javascript-works-in-browser-and-node-ab7d0d09ac2f
+---
+### Thanks !
