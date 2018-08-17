@@ -13,7 +13,7 @@ Browser under the hood has:
 + Js Heap.
 + Web APIs.
 ---
-![eventLoop](images/event_loop.png)
+![eventLoop](images/event_loop_3.png)
 ---
 ![callStack](images/call_stack.gif)
 ---
