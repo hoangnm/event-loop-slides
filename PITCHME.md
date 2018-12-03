@@ -5,7 +5,7 @@
 - Why ~~should~~ must we know event loop ?
 ---
 ### What is event loop ?
-Event loop is what allow js application to work with asynchronous operations (setTimeout, AJAX, ...).
+Event loop is what allows js application to work with asynchronous operations (setTimeout, AJAX, ...).
 
 Browser under the hood has:
 + Call stack.
